@@ -1,0 +1,9 @@
+idf_component_register(
+    SRCS
+        "app_driver.c"
+        "app_main.c"
+        "lib_ADC/lib_adc.c"
+    INCLUDE_DIRS
+        "."
+        "lib_ADC"
+)
