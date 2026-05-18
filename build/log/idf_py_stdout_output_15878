@@ -1,0 +1,616 @@
+�����ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x1 (POWERON),boot:0x8 (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2810,len:0x178c
+load:0x403c8700,len:0x4
+load:0x403c8704,len:0xcb8
+load:0x403cb700,len:0x2db0
+entry 0x403c8914
+[0;32mI (27) boot: ESP-IDF v5.3.1-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time May 18 2026 22:12:43[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v0.2[0m
+[0;32mI (34) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (39) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (44) boot.esp32s3: SPI Flash Size : 4MB[0m
+[0;32mI (48) boot: Enabling RNG early entropy source...[0m
+[0;32mI (54) boot: Partition Table:[0m
+[0;32mI (57) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (65) boot:  0 esp_secure_cert  unknown          3f 06 0000d000 00002000[0m
+[0;32mI (72) boot:  1 nvs_key          NVS keys         01 04 0000f000 00001000[0m
+[0;32mI (80) boot:  2 nvs              WiFi data        01 02 00010000 00006000[0m
+[0;32mI (87) boot:  3 otadata          OTA data         01 00 00016000 00002000[0m
+[0;32mI (95) boot:  4 phy_init         RF data          01 01 00018000 00001000[0m
+[0;32mI (102) boot:  5 ota_0            OTA app          00 10 00020000 001e0000[0m
+[0;32mI (110) boot:  6 ota_1            OTA app          00 11 00200000 001e0000[0m
+[0;32mI (117) boot:  7 reserved         unknown          06 06 003e0000 0001a000[0m
+[0;32mI (125) boot:  8 fctry            WiFi data        01 02 003fa000 00006000[0m
+[0;32mI (132) boot: End of partition table[0m
+[0;32mI (137) boot: No factory image, trying OTA 0[0m
+[0;32mI (141) esp_image: segment 0: paddr=00020020 vaddr=3c0f0020 size=5c724h (378660) map[0m
+[0;32mI (218) esp_image: segment 1: paddr=0007c74c vaddr=3fc9d900 size=038cch ( 14540) load[0m
+[0;32mI (221) esp_image: segment 2: paddr=00080020 vaddr=42000020 size=e377ch (931708) map[0m
+[0;32mI (391) esp_image: segment 3: paddr=001637a4 vaddr=3fca11cc size=01d8ch (  7564) load[0m
+[0;32mI (393) esp_image: segment 4: paddr=00165538 vaddr=40374000 size=198b4h (104628) load[0m
+[0;32mI (419) esp_image: segment 5: paddr=0017edf4 vaddr=600fe100 size=00004h (     4) load[0m
+[0;32mI (430) boot: Loaded app from partition at offset 0x20000[0m
+[0;32mI (431) boot: Set actual ota_seq=1 in otadata[0][0m
+[0;32mI (431) boot: Disabling RNG early entropy source...[0m
+[0;32mI (448) cpu_start: Multicore app[0m
+[0;32mI (457) cpu_start: Pro cpu start user code[0m
+[0;32mI (457) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (457) app_init: Application information:[0m
+[0;32mI (460) app_init: Project name:     led_light[0m
+[0;32mI (465) app_init: App version:      1.0[0m
+[0;32mI (469) app_init: Compile time:     May 18 2026 22:12:53[0m
+[0;32mI (475) app_init: ELF file SHA256:  b861db3b0...[0m
+[0;32mI (481) app_init: ESP-IDF:          v5.3.1-dirty[0m
+[0;32mI (486) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (491) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (496) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (501) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (508) heap_init: At 3FCA7750 len 00041FC0 (263 KiB): RAM[0m
+[0;32mI (514) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (520) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (526) heap_init: At 600FE104 len 00001EE4 (7 KiB): RTCRAM[0m
+[0;32mI (533) spi_flash: detected chip: boya[0m
+[0;32mI (537) spi_flash: flash io: dio[0m
+[0;33mW (541) spi_flash: Detected size(16384k) larger than the size in the binary image header(4096k). Using the size in the binary image header.[0m
+[0;32mI (555) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (561) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (568) coexist: coex firmware version: 4482466[0m
+[0;32mI (583) coexist: coexist rom version e7ae62f[0m
+[0;32mI (583) main_task: Started on CPU0[0m
+[0;32mI (593) main_task: Calling app_main()[0m
+[0;32mI (593) rmaker_console: Initialising UART on port 0[0m
+[0;32mI (593) uart: queue free spaces: 8[0m
+[0;32mI (593) rmaker_common_cmds: Registering command: reboot[0m
+[0;32mI (603) rmaker_common_cmds: Registering command: up-time[0m
+[0;32mI (613) rmaker_common_cmds: Registering command: mem-dump[0m
+[0;32mI (613) rmaker_common_cmds: Registering command: task-dump[0m
+[0;32mI (623) rmaker_common_cmds: Registering command: cpu-dump[0m
+[0;32mI (623) rmaker_common_cmds: Registering command: sock-dump[0m
+[0;32mI (633) rmaker_common_cmds: Registering command: heap-trace[0m
+[0;32mI (643) rmaker_common_cmds: Registering command: reset-to-factory[0m
+[0;32mI (643) rmaker_common_cmds: Registering command: local-time[0m
+[0;32mI (653) rmaker_common_cmds: Registering command: tz-set[0m
+[0;32mI (653) esp_rmaker_commands: Registering command: add-user[0m
+[0;32mI (663) esp_rmaker_commands: Registering command: get-node-id[0m
+[0;32mI (673) esp_rmaker_commands: Registering command: wifi-prov[0m
+[0;32mI (673) esp_rmaker_commands: Registering command: cmd[0m
+[0;32mI (683) esp_rmaker_commands: Registering command: sign-data[0m
+[0;32mI (693) esp_rmaker_commands: Registering command: clear-claim-data[0m
+[0;32mI (693) led_strips: LED Indicator Version: 2.1.2[0m
+[0;32mI (703) gpio: GPIO[48]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (713) led_strips: blink_lists is null, use default blink list[0m
+[0;32mI (713) led_strips: Indicator create successfully. type:LED Strips mode, hardware_data:0x3fcaf6a4, blink_lists:default[0m
+[0;32mI (733) gpio: GPIO[0]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (733) button: IoT Button Version: 4.1.6[0m
+[0;32mI (753) pp: pp rom version: e7ae62f[0m
+[0;32mI (753) net80211: net80211 rom version: e7ae62f[0m
+[0;32mI (763) wifi:wifi driver task: 3fcb4fe8, prio:23, stack:6656, core=0[0m
+[0;32mI (763) wifi:wifi firmware version: ccaebfa[0m
+[0;32mI (763) wifi:wifi certification version: v7.0[0m
+[0;32mI (763) wifi:config NVS flash: enabled[0m
+[0;32mI (773) wifi:config nano formating: disabled[0m
+[0;32mI (773) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (773) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (783) wifi:Init management short buffer num: 32[0m
+[0;32mI (783) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (793) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (793) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (803) wifi:Init static rx buffer num: 10[0m
+[0;32mI (803) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (803) wifi_init: rx ba win: 6[0m
+[0;32mI (813) wifi_init: accept mbox: 6[0m
+[0;32mI (813) wifi_init: tcpip mbox: 32[0m
+[0;32mI (813) wifi_init: udp mbox: 6[0m
+[0;32mI (823) wifi_init: tcp mbox: 6[0m
+[0;32mI (823) wifi_init: tcp tx win: 5760[0m
+[0;32mI (833) wifi_init: tcp rx win: 5760[0m
+[0;32mI (833) wifi_init: tcp mss: 1440[0m
+[0;32mI (833) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (843) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (863) esp_rmaker_work_queue: Work Queue created.[0m
+[0;32mI (863) esp_mqtt_glue: AWS PPI: ?Platform=APN3|A0|RM|EX00|RMDev|1x0|441BF6D40D18[0m
+[0;32mI (863) esp_mqtt_glue: Initialising MQTT[0m
+[0;32mI (873) esp_mqtt_glue: MQTT LWT not configured[0m
+[0;32mI (873) esp_rmaker_mqtt_budget: MQTT Budgeting initialised. Default: 100, Max: 1024, Revive count: 1, Revive period: 5[0m
+[0;32mI (883) esp_rmaker_node: Node ID ----- oP2vAk2NdgXxdGchc8nK2Q[0m
+[0;32mI (893) esp_rmaker_time: Initializing SNTP. Using the SNTP server: pool.ntp.org[0m
+[0;32mI (903) esp_rmaker_ota_using_topics: OTA enabled with Topics[0m
+[0;32mI (903) esp_rmaker_ota: OTA state = 2[0m
+[0;32mI (913) esp_rmaker_time: SNTP already initialized.[0m
+[0;32mI (913) esp_rmaker_time_service: Time service enabled[0m
+[0;32mI (923) esp_rmaker_time: SNTP already initialized.[0m
+[0;32mI (933) esp_rmaker_system_service: System service enabled.[0m
+[0;32mI (933) app_insights: Enable CONFIG_ESP_INSIGHTS_ENABLED to get Insights.[0m
+[0;32mI (943) esp_rmaker_core: Starting RainMaker Work Queue task[0m
+[0;32mI (943) esp_rmaker_work_queue: RainMaker Work Queue task started.[0m
+[0;32mI (953) tag: 0x3fcbf0dc   e5 02 4e 6f 76 61 00 01  00 05 01 00              |..Nova......|[0m
+[0;32mI (963) app_wifi: Starting provisioning[0m
+[0;32mI (973) phy_init: phy_version 680,a6008b2,Jun  4 2024,16:41:10[0m
+[0;33mW (1013) phy_init: saving new calibration data because of checksum failure, mode(0)[0m
+[0;32mI (1053) wifi:mode : sta (44:1b:f6:d4:0d:18)[0m
+[0;32mI (1053) wifi:enable tsf[0m
+[0;32mI (1063) wifi:mode : sta (44:1b:f6:d4:0d:18) + softAP (44:1b:f6:d4:0d:19)[0m
+[0;32mI (1063) wifi:Total power save buffer number: 16[0m
+[0;32mI (1063) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (1063) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (1073) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.4.1[0m
+[0;32mI (1073) wifi:Total power save buffer number: 16[0m
+[0;32mI (1083) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.4.1[0m
+[0;32mI (1093) network_prov_mgr: Provisioning started with service name : PROV_f6b841 [0m
+[0;32mI (1103) app_wifi: Provisioning started[0m
+[0;32mI (1103) app_network: Scan this QR code from the ESP RainMaker phone app for Provisioning.[0m
+[0;32mI (1113) QRCODE: Encoding below text with ECC LVL 0 & QR Code Version 5[0m
+[0;32mI (1123) QRCODE: {"ver":"v1","name":"PROV_f6b841","pop":"8024a161","transport":"softap"}[0m
+                                      
+  █▀▀▀▀▀█ ▄▀ ▄█ ▄█▄▄▄▀▀ ██  █▀▀▀▀▀█   
+  █ ███ █ ▀███▀  ██▀██▄ ▀▄▄ █ ███ █   
+  █ ▀▀▀ █ █▄ ▄ ▀███ ▀▄██▀▀▀ █ ▀▀▀ █   
+  ▀▀▀▀▀▀▀ █▄▀ █ ▀ ▀▄█ ▀▄█ █ ▀▀▀▀▀▀▀   
+  █▀ █▄ ▀█▄ █▄ ▀▄▀█▄█ ▀██▀█▄█▀▀▄▀▀▄   
+  ▄█▄█▄▄▀▄█▀▀  ▄█▄  ███▄▀▄▄ ▄█    █   
+  ▄████ ▀ █ ▄▄█▀▀  ███ █▀█▄▀█ ▄▄ ▀█   
+  █▀ ██▀▀█▄ ▄ ██   ▄   ▄█▀█▀  ▄█ █▄   
+  █ ██ ▄▀▀▄▄ ▀▀▄  █▀█▀██  ▄█▀ ▀▀▄ ▀   
+  ▄▄█▄▄█▀▄▀  ▄▄▀█ ▀▄█▄▀██ ▄ █▄▄▄ ▀█   
+    ▀▄▀▀▀ █▀█ ▄▀▀▀█▄▀▀▀▀▀▄█ ▄▄ █ ▄▄   
+  ▀█▀▀██▀ █▀▀▄▀▄ ▄▀▀▀▀█▄▀▄▀█  ▄▄ ▀▀   
+  ▀ ▀   ▀▀█▄▄ ▀▀  ▀▀▀▄▀██ █▀▀▀█▀ ▄▄   
+  █▀▀▀▀▀█ ▀▄ █▀█▀ ▀█ ▄ █▀▀█ ▀ ██ ▀▄   
+  █ ███ █ ▄▀ ▄▄▄  █▀▀▀ ██ ▀████▀ ▄█   
+  █ ▀▀▀ █ ▄▀▄▄   ▄▀█▀▄▄▄█ ▀  ▄▀█▀▀▀   
+  ▀▀▀▀▀▀▀ ▀  ▀▀▀▀    ▀ ▀  ▀ ▀ ▀▀ ▀    
+                                      
+
+[0;32mI (1323) app_network: If QR code is not visible, copy paste the below URL in a browser.
+https://rainmaker.espressif.com/qrcode.html?data={"ver":"v1","name":"PROV_f6b841","pop":"8024a161","transport":"softap"}[0m
+[0;32mI (1343) app_network: Provisioning will auto stop after 30 minute(s).[0m
+[0;32mI (10143) wifi:new:<1,0>, old:<1,1>, ap:<1,1>, sta:<0,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (10153) wifi:station: 1e:3b:a4:0f:68:e3 join, AID=1, bgn, 20[0m
+[0;32mI (11303) esp_netif_lwip: DHCP server assigned IP to a client, IP is: 192.168.4.2[0m
+[0;32mI (13283) wifi:<ba-add>idx:2 (ifx:1, 1e:3b:a4:0f:68:e3), tid:0, ssn:0, winSize:64[0m
+[0;32mI (15833) app_network: Secured session established![0m
+[0;32mI (22653) esp_rmaker_chal_resp: Challenge-Response handler invoked[0m
+[0;32mI (22653) esp_rmaker_chal_resp: Challenge payload length: 64[0m
+[0;32mI (22653) esp_rmaker_user_node_auth: ECDSA key found[0m
+[0;32mI (22723) esp_rmaker_chal_resp: Setting up response with node_id: oP2vAk2NdgXxdGchc8nK2Q, binary signature len: 70[0m
+[0;32mI (22723) esp_rmaker_chal_resp: Challenge-Response handler completed successfully[0m
+[0;33mW (23553) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (23573) app_wifi: Received Wi-Fi credentials
+	SSID     : Roma
+	Password : 87654321[0m
+[0;32mI (27893) wifi:primary chan differ, old=1, new=13, start CSA timer[0m
+[0;32mI (27993) wifi:switch to channel 13[0m
+[0;32mI (27993) wifi:ap channel adjust o:1,1 n:13,2[0m
+[0;32mI (27993) wifi:new:<13,0>, old:<1,0>, ap:<13,2>, sta:<0,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (28003) wifi:new:<13,2>, old:<13,0>, ap:<13,2>, sta:<13,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (28003) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (28013) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (28023) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (28043) wifi:connected with Roma, aid = 1, channel 13, BW20, bssid = 04:5e:a4:e9:58:59[0m
+[0;32mI (28043) wifi:security: WPA2-PSK, phy: bgn, rssi: -49[0m
+[0;32mI (28083) wifi:pm start, type: 1[0m
+
+[0;32mI (28083) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (28083) wifi:set rx beacon pti, rx_bcn_pti: 14, bcn_timeout: 25000, mt_pti: 14, mt_time: 10000[0m
+[0;32mI (28093) wifi:dp: 3, bi: 25600, li: 12, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (28103) wifi:AP's beacon interval = 25600 us, DTIM period = 3[0m
+[0;32mI (29943) wifi:<ba-add>idx:0 (ifx:0, 04:5e:a4:e9:58:59), tid:0, ssn:2, winSize:64[0m
+[0;32mI (31103) esp_netif_handlers: sta ip: 192.168.1.24, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (31103) app_network: Connected with IP Address:192.168.1.24[0m
+[0;32mI (31103) network_prov_mgr: STA Got IP[0m
+[0;32mI (31113) app_wifi: Provisioning successful[0m
+[0;32mI (31113) esp_rmaker_cmd_resp: Enabling Command-Response Module.[0m
+[0;32mI (31113) main_task: Returned from app_main()[0m
+[0;32mI (31123) esp_rmaker_node: Node attribute cmd-resp created[0m
+[0;32mI (31133) esp_rmaker_param_cmd_resp: Enabling parameter command-response functionality[0m
+[0;32mI (31143) esp_rmaker_param_cmd_resp: Allocated 2048 bytes for command response buffer[0m
+[0;32mI (31143) esp_rmaker_common_cmd_resp: Registered command: cmd=1, access=7[0m
+[0;32mI (31153) esp_rmaker_param_cmd_resp: Registered standard set params command handler (id=1)[0m
+[0;32mI (31163) esp_mqtt_glue: Connecting to a1p72mufdu6064-ats.iot.us-east-1.amazonaws.com[0m
+[0;32mI (31173) esp_rmaker_core: Waiting for MQTT connection[0m
+[0;32mI (31583) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (32073) esp_rmaker_time: SNTP Synchronised.[0m
+[0;32mI (32073) esp_rmaker_time: The current time is: Tue May 19 03:14:06 2026 +0800[CST], DST: No.[0m
+[0;32mI (32403) esp_mqtt_glue: MQTT Connected[0m
+[0;32mI (32413) esp_rmaker_cmd_resp: Checking for pending commands.[0m
+[0;32mI (32413) esp_rmaker_node_config: Generated Node config of length 2247[0m
+[0;32mI (32423) esp_rmaker_core: User node mapping done, initializing MQTT parameters.[0m
+[0;32mI (32423) esp_rmaker_param: Params MQTT Init done.[0m
+[0;32mI (32433) esp_rmaker_param: Reporting params (init): {"Light":{"Name":"Light","Power":true,"Brightness":25,"Hue":180,"Saturation":100,"AmbientLight":0.00000},"Time":{"TZ":"","TZ-POSIX":""},"Schedule":{"Schedules":[]},"Scenes":{"Scenes":[]},"System":{"Reboot":false,"Factory-Reset":false,"Wi-Fi-Reset":false}}[0m
+[0;32mI (32463) esp_rmaker_param: Reporting Time Series Data for Light.AmbientLight[0m
+[0;32mI (32563) esp_rmaker_ota_using_topics: Subscribing to: node/oP2vAk2NdgXxdGchc8nK2Q/otaurl[0m
+[0;32mI (34733) wifi:station: 1e:3b:a4:0f:68:e3 leave, AID = 1, reason = 4, bss_flags is 33721443, bss:0x3fcc2e44[0m
+[0;32mI (34733) wifi:new:<13,0>, old:<13,2>, ap:<13,2>, sta:<13,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (34733) wifi:<ba-del>idx:2, tid:0[0m
+[0;32mI (34743) wifi:mode : sta (44:1b:f6:d4:0d:18)[0m
+[0;32mI (34753) network_prov_mgr: Provisioning stopped[0m
+[0;32mI (34813) esp_rmaker_param: Received params: {"Time":{"TZ":"Europe/Uzhgorod"}}[0m
+[0;32mI (34813) esp_rmaker_param: Found 1 params in write request for Time[0m
+[0;32mI (34813) esp_rmaker_time_service: Received value = Europe/Uzhgorod for Time - TZ[0m
+[0;32mI (34823) esp_rmaker_time: The current time is: Mon May 18 22:14:09 2026 +0300[EEST], DST: Yes.[0m
+[0;32mI (34833) esp_rmaker_param: Reporting params: {"Time":{"TZ-POSIX":"EET-2EEST,M3.5.0/3,M10.5.0/4"}}[0m
+[0;32mI (34843) esp_rmaker_param: Reporting params: {"Time":{"TZ":"Europe/Uzhgorod"}}[0m
+[0;32mI (36113) lib_adc: ADC1 CH0 raw: 588[0m
+[0;32mI (36113) esp_rmaker_param: Reporting Time Series Data for Light.AmbientLight[0m
+[0;32mI (36113) esp_rmaker_param: Reporting params: {"Light":{"AmbientLight":588.00000}}[0m
+[0;32mI (36123) app_main: Light level: DARK (588), set brightness=40[0m
+[0;32mI (36123) esp_rmaker_param: Reporting params: {"Light":{"Brightness":40}}[0m
+[0;32mI (37563) esp_rmaker_ota_using_topics: Fetching OTA details, if any.[0m
+[0;32mI (41113) lib_adc: ADC1 CH0 raw: 139[0m
+[0;32mI (41113) esp_rmaker_param: Reporting Time Series Data for Light.AmbientLight[0m
+[0;32mI (41113) esp_rmaker_param: Reporting params: {"Light":{"AmbientLight":139.00000}}[0m
+[0;32mI (41123) app_main: Light level: DARK (139), set brightness=40[0m
+[0;32mI (41123) esp_rmaker_param: Reporting params: {"Light":{"Brightness":40}}[0m
+[0;32mI (42703) esp_rmaker_param: Received params: {"Light":{"Power":false}}[0m
+[0;32mI (42703) esp_rmaker_param: Found 1 params in write request for Light[0m
+[0;32mI (42703) app_main: Write via: Cloud[0m
+[0;32mI (42713) esp_rmaker_param: Reporting params: {"Light":{"Power":false}}[0m
+[0;32mI (43183) esp_rmaker_param: Received params: {"Light":{"Power":true}}[0m
+[0;32mI (43183) esp_rmaker_param: Found 1 params in write request for Light[0m
+[0;32mI (43183) app_main: Write via: Cloud[0m
+[0;32mI (43183) esp_rmaker_param: Reporting params: {"Light":{"Power":true}}[0m
+[0;32mI (44313) esp_rmaker_param: Received params: {"Light":{"Power":false}}[0m
+[0;32mI (44313) esp_rmaker_param: Found 1 params in write request for Light[0m
+[0;32mI (44313) app_main: Write via: Cloud[0m
+[0;32mI (44323) esp_rmaker_param: Reporting params: {"Light":{"Power":false}}[0m
+[0;32mI (46083) esp_rmaker_param: Received params: {"Light":{"Power":true}}[0m
+[0;32mI (46083) esp_rmaker_param: Found 1 params in write request for Light[0m
+[0;32mI (46083) app_main: Write via: Cloud[0m
+[0;32mI (46093) esp_rmaker_param: Reporting params: {"Light":{"Power":true}}[0m
+[0;32mI (46113) lib_adc: ADC1 CH0 raw: 117[0m
+[0;32mI (46113) esp_rmaker_param: Reporting Time Series Data for Light.AmbientLight[0m
+[0;32mI (46113) esp_rmaker_param: Reporting params: {"Light":{"AmbientLight":117.00000}}[0m
+[0;32mI (46123) app_main: Light level: DARK (117), set brightness=40[0m
+[0;32mI (46123) esp_rmaker_param: Reporting params: {"Light":{"Brightness":40}}[0m
+[0;32mI (50453) esp_rmaker_param: Received params: {"Light":{"Hue":176}}[0m
+[0;32mI (50453) esp_rmaker_param: Found 1 params in write request for Light[0m
+[0;32mI (50463) app_main: Write via: Cloud[0m
+[0;32mI (50463) esp_rmaker_param: Reporting params: {"Light":{"Hue":176}}[0m
+[0;32mI (50913) esp_rmaker_param: Received params: {"Light":{"Hue":130}}[0m
+[0;32mI (50923) esp_rmaker_param: Found 1 params in write request for Light[0m
+[0;32mI (50923) app_main: Write via: Cloud[0m
+[0;32mI (50923) esp_rmaker_param: Reporting params: {"Light":{"Hue":130}}[0m
+[0;32mI (51113) lib_adc: ADC1 CH0 raw: 107[0m
+[0;32mI (51113) esp_rmaker_param: Reporting Time Series Data for Light.AmbientLight[0m
+[0;32mI (51113) esp_rmaker_param: Reporting params: {"Light":{"AmbientLight":107.00000}}[0m
+[0;32mI (51123) app_main: Light level: DARK (107), set brightness=40[0m
+[0;32mI (51123) esp_rmaker_param: Reporting params: {"Light":{"Brightness":40}}[0m
+[0;32mI (51303) esp_rmaker_param: Received params: {"Light":{"Hue":81}}[0m
+[0;32mI (51303) esp_rmaker_param: Found 1 params in write request for Light[0m
+[0;32mI (51303) app_main: Write via: Cloud[0m
+[0;32mI (51313) esp_rmaker_param: Reporting params: {"Light":{"Hue":81}}[0m
+[0;32mI (51693) esp_rmaker_param: Received params: {"Light":{"Hue":49}}[0m
+[0;32mI (51693) esp_rmaker_param: Found 1 params in write request for Light[0m
+[0;32mI (51693) app_main: Write via: Cloud[0m
+[0;32mI (51693) esp_rmaker_param: Reporting params: {"Light":{"Hue":49}}[0m
+[0;32mI (52093) esp_rmaker_param: Received params: {"Light":{"Hue":87}}[0m
+[0;32mI (52093) esp_rmaker_param: Found 1 params in write request for Light[0m
+[0;32mI (52093) app_main: Write via: Cloud[0m
+[0;32mI (52103) esp_rmaker_param: Reporting params: {"Light":{"Hue":87}}[0m
+[0;32mI (52553) esp_rmaker_param: Received params: {"Light":{"Hue":252}}[0m
+[0;32mI (52553) esp_rmaker_param: Found 1 params in write request for Light[0m
+[0;32mI (52553) app_main: Write via: Cloud[0m
+[0;32mI (52563) esp_rmaker_param: Reporting params: {"Light":{"Hue":252}}[0m
+[0;32mI (52993) esp_rmaker_param: Received params: {"Light":{"Hue":330}}[0m
+[0;32mI (52993) esp_rmaker_param: Found 1 params in write request for Light[0m
+[0;32mI (52993) app_main: Write via: Cloud[0m
+[0;32mI (53003) esp_rmaker_param: Reporting params: {"Light":{"Hue":330}}[0m
+[0;32mI (53373) esp_rmaker_param: Received params: {"Light":{"Hue":357}}[0m
+[0;32mI (53373) esp_rmaker_param: Found 1 params in write request for Light[0m
+[0;32mI (53383) app_main: Write via: Cloud[0m
+[0;32mI (53383) esp_rmaker_param: Reporting params: {"Light":{"Hue":357}}[0m
+[0;32mI (54373) esp_rmaker_param: Received params: {"Light":{"Hue":319}}[0m
+[0;32mI (54373) esp_rmaker_param: Found 1 params in write request for Light[0m
+[0;32mI (54373) app_main: Write via: Cloud[0m
+[0;32mI (54383) esp_rmaker_param: Reporting params: {"Light":{"Hue":319}}[0m
+[0;32mI (54613) esp_rmaker_param: Received params: {"Light":{"Hue":244}}[0m
+[0;32mI (54613) esp_rmaker_param: Found 1 params in write request for Light[0m
+[0;32mI (54613) app_main: Write via: Cloud[0m
+[0;32mI (54613) esp_rmaker_param: Reporting params: {"Light":{"Hue":244}}[0m
+[0;32mI (55523) esp_rmaker_param: Received params: {"Light":{"Hue":254}}[0m
+[0;32mI (55523) esp_rmaker_param: Found 1 params in write request for Light[0m
+[0;32mI (55533) app_main: Write via: Cloud[0m
+[0;32mI (55533) esp_rmaker_param: Reporting params: {"Light":{"Hue":254}}[0m
+[0;32mI (56113) lib_adc: ADC1 CH0 raw: 93[0m
+[0;32mI (56113) esp_rmaker_param: Reporting Time Series Data for Light.AmbientLight[0m
+[0;32mI (56113) esp_rmaker_param: Reporting params: {"Light":{"AmbientLight":93.00000}}[0m
+[0;32mI (56123) esp_rmaker_param: Received params: {"Light":{"Hue":360}}[0m
+[0;32mI (56123) esp_rmaker_param: Found 1 params in write request for Light[0m
+[0;32mI (56133) app_main: Write via: Cloud[0m
+[0;32mI (56133) esp_rmaker_param: Reporting params: {"Light":{"Hue":360}}[0m
+[0;32mI (56153) app_main: Light level: DARK (93), set brightness=40[0m
+[0;32mI (56153) esp_rmaker_param: Reporting params: {"Light":{"Brightness":40}}[0m
+[0;32mI (57143) esp_rmaker_param: Received params: {"Light":{"Hue":352}}[0m
+[0;32mI (57143) esp_rmaker_param: Found 1 params in write request for Light[0m
+[0;32mI (57143) app_main: Write via: Cloud[0m
+[0;32mI (57143) esp_rmaker_param: Reporting params: {"Light":{"Hue":352}}[0m
+[0;32mI (57403) esp_rmaker_param: Received params: {"Light":{"Hue":360}}[0m
+[0;32mI (57403) esp_rmaker_param: Found 1 params in write request for Light[0m
+[0;32mI (57403) app_main: Write via: Cloud[0m
+[0;32mI (57403) esp_rmaker_param: Reporting params: {"Light":{"Hue":360}}[0m
+[0;32mI (58673) esp_rmaker_param: Received params: {"Light":{"Power":false}}[0m
+[0;32mI (58673) esp_rmaker_param: Found 1 params in write request for Light[0m
+[0;32mI (58683) app_main: Write via: Cloud[0m
+[0;32mI (58683) esp_rmaker_param: Reporting params: {"Light":{"Power":false}}[0m
+[0;32mI (59523) esp_rmaker_param: Received params: {"Light":{"Power":true}}[0m
+[0;32mI (59523) esp_rmaker_param: Found 1 params in write request for Light[0m
+[0;32mI (59523) app_main: Write via: Cloud[0m
+[0;32mI (59523) esp_rmaker_param: Reporting params: {"Light":{"Power":true}}[0m
+[0;32mI (60133) esp_rmaker_param: Received params: {"Light":{"Brightness":43}}[0m
+[0;32mI (60133) esp_rmaker_param: Found 1 params in write request for Light[0m
+[0;32mI (60133) app_main: Write via: Cloud[0m
+[0;32mI (60143) esp_rmaker_param: Reporting params: {"Light":{"Brightness":43}}[0m
+[0;32mI (60823) esp_rmaker_param: Received params: {"Light":{"Brightness":100}}[0m
+[0;32mI (60823) esp_rmaker_param: Found 1 params in write request for Light[0m
+[0;32mI (60833) app_main: Write via: Cloud[0m
+[0;32mI (60833) esp_rmaker_param: Reporting params: {"Light":{"Brightness":100}}[0m
+[0;32mI (61113) lib_adc: ADC1 CH0 raw: 77[0m
+[0;32mI (61113) esp_rmaker_param: Reporting Time Series Data for Light.AmbientLight[0m
+[0;32mI (61113) esp_rmaker_param: Reporting params: {"Light":{"AmbientLight":77.00000}}[0m
+[0;32mI (61123) app_main: Light level: DARK (77), set brightness=40[0m
+[0;32mI (61123) esp_rmaker_param: Reporting params: {"Light":{"Brightness":40}}[0m
+[0;32mI (63743) esp_rmaker_param: Received params: {"Light":{"Brightness":94}}[0m
+[0;32mI (63743) esp_rmaker_param: Found 1 params in write request for Light[0m
+[0;32mI (63743) app_main: Write via: Cloud[0m
+[0;32mI (63753) esp_rmaker_param: Reporting params: {"Light":{"Brightness":94}}[0m
+[0;32mI (64213) esp_rmaker_param: Received params: {"Light":{"Brightness":0}}[0m
+[0;32mI (64213) esp_rmaker_param: Found 1 params in write request for Light[0m
+[0;32mI (64213) app_main: Write via: Cloud[0m
+[0;32mI (64213) esp_rmaker_param: Reporting params: {"Light":{"Brightness":0}}[0m
+[0;32mI (65823) esp_rmaker_param: Received params: {"Light":{"Brightness":4}}[0m
+[0;32mI (65823) esp_rmaker_param: Found 1 params in write request for Light[0m
+[0;32mI (65823) app_main: Write via: Cloud[0m
+[0;32mI (65823) esp_rmaker_param: Reporting params: {"Light":{"Brightness":4}}[0m
+[0;32mI (65843) esp_rmaker_param: Received params: {"Light":{"Brightness":29}}[0m
+[0;32mI (65843) esp_rmaker_param: Found 1 params in write request for Light[0m
+[0;32mI (65853) app_main: Write via: Cloud[0m
+[0;32mI (65853) esp_rmaker_param: Reporting params: {"Light":{"Brightness":29}}[0m
+[0;32mI (66113) lib_adc: ADC1 CH0 raw: 40[0m
+[0;32mI (66113) esp_rmaker_param: Reporting Time Series Data for Light.AmbientLight[0m
+[0;32mI (66113) esp_rmaker_param: Reporting params: {"Light":{"AmbientLight":40.00000}}[0m
+[0;32mI (66123) app_main: Light level: DARK (40), set brightness=40[0m
+[0;32mI (66123) esp_rmaker_param: Reporting params: {"Light":{"Brightness":40}}[0m
+[0;32mI (67123) esp_rmaker_param: Received params: {"Light":{"Brightness":33}}[0m
+[0;32mI (67123) esp_rmaker_param: Found 1 params in write request for Light[0m
+[0;32mI (67123) app_main: Write via: Cloud[0m
+[0;32mI (67133) esp_rmaker_param: Reporting params: {"Light":{"Brightness":33}}[0m
+[0;32mI (67583) esp_rmaker_param: Received params: {"Light":{"Brightness":100}}[0m
+[0;32mI (67583) esp_rmaker_param: Found 1 params in write request for Light[0m
+[0;32mI (67583) app_main: Write via: Cloud[0m
+[0;32mI (67593) esp_rmaker_param: Reporting params: {"Light":{"Brightness":100}}[0m
+[0;32mI (69583) esp_rmaker_param: Received params: {"Light":{"Power":false}}[0m
+[0;32mI (69583) esp_rmaker_param: Found 1 params in write request for Light[0m
+[0;32mI (69583) app_main: Write via: Cloud[0m
+[0;32mI (69593) esp_rmaker_param: Reporting params: {"Light":{"Power":false}}[0m
+[0;32mI (70503) esp_rmaker_param: Received params: {"Light":{"Power":true}}[0m
+[0;32mI (70503) esp_rmaker_param: Found 1 params in write request for Light[0m
+[0;32mI (70503) app_main: Write via: Cloud[0m
+[0;32mI (70513) esp_rmaker_param: Reporting params: {"Light":{"Power":true}}[0m
+[0;32mI (71113) lib_adc: ADC1 CH0 raw: 56[0m
+[0;32mI (71113) esp_rmaker_param: Reporting Time Series Data for Light.AmbientLight[0m
+[0;32mI (71113) esp_rmaker_param: Reporting params: {"Light":{"AmbientLight":56.00000}}[0m
+[0;32mI (71123) app_main: Light level: DARK (56), set brightness=40[0m
+[0;32mI (71123) esp_rmaker_param: Reporting params: {"Light":{"Brightness":40}}[0m
+[0;32mI (73493) esp_rmaker_param: Received params: {"Light":{"Brightness":45}}[0m
+[0;32mI (73493) esp_rmaker_param: Found 1 params in write request for Light[0m
+[0;32mI (73503) app_main: Write via: Cloud[0m
+[0;32mI (73503) esp_rmaker_param: Reporting params: {"Light":{"Brightness":45}}[0m
+[0;32mI (74003) esp_rmaker_param: Received params: {"Light":{"Brightness":100}}[0m
+[0;32mI (74013) esp_rmaker_param: Found 1 params in write request for Light[0m
+[0;32mI (74013) app_main: Write via: Cloud[0m
+[0;32mI (74013) esp_rmaker_param: Reporting params: {"Light":{"Brightness":100}}[0m
+[0;32mI (75733) esp_rmaker_param: Received params: {"Light":{"Power":false}}[0m
+[0;32mI (75733) esp_rmaker_param: Found 1 params in write request for Light[0m
+[0;32mI (75733) app_main: Write via: Cloud[0m
+[0;32mI (75733) esp_rmaker_param: Reporting params: {"Light":{"Power":false}}[0m
+[0;32mI (76113) lib_adc: ADC1 CH0 raw: 104[0m
+[0;32mI (76113) esp_rmaker_param: Reporting Time Series Data for Light.AmbientLight[0m
+[0;32mI (76113) esp_rmaker_param: Reporting params: {"Light":{"AmbientLight":104.00000}}[0m
+[0;32mI (76123) app_main: Light level: DARK (104), set brightness=40[0m
+[0;32mI (76123) esp_rmaker_param: Reporting params: {"Light":{"Power":true}}[0m
+[0;32mI (76133) esp_rmaker_param: Reporting params: {"Light":{"Brightness":40}}[0m
+[0;32mI (76723) esp_rmaker_param: Received params: {"Light":{"Power":true}}[0m
+[0;32mI (76723) esp_rmaker_param: Found 1 params in write request for Light[0m
+[0;32mI (76723) app_main: Write via: Cloud[0m
+[0;32mI (76733) esp_rmaker_param: Reporting params: {"Light":{"Power":true}}[0m
+[0;32mI (78183) esp_rmaker_param: Received params: {"Light":{"Brightness":45}}[0m
+[0;32mI (78183) esp_rmaker_param: Found 1 params in write request for Light[0m
+[0;32mI (78183) app_main: Write via: Cloud[0m
+[0;32mI (78193) esp_rmaker_param: Reporting params: {"Light":{"Brightness":45}}[0m
+[0;32mI (78333) esp_rmaker_param: Received params: {"Light":{"Brightness":100}}[0m
+[0;32mI (78333) esp_rmaker_param: Found 1 params in write request for Light[0m
+[0;32mI (78343) app_main: Write via: Cloud[0m
+[0;32mI (78343) esp_rmaker_param: Reporting params: {"Light":{"Brightness":100}}[0m
+[0;32mI (81113) lib_adc: ADC1 CH0 raw: 135[0m
+[0;32mI (81113) esp_rmaker_param: Reporting Time Series Data for Light.AmbientLight[0m
+[0;32mI (81113) esp_rmaker_param: Reporting params: {"Light":{"AmbientLight":135.00000}}[0m
+[0;32mI (81123) app_main: Light level: DARK (135), set brightness=40[0m
+[0;32mI (81123) esp_rmaker_param: Reporting params: {"Light":{"Brightness":40}}[0m
+[0;32mI (86113) lib_adc: ADC1 CH0 raw: 119[0m
+[0;32mI (86113) esp_rmaker_param: Reporting Time Series Data for Light.AmbientLight[0m
+[0;32mI (86113) esp_rmaker_param: Reporting params: {"Light":{"AmbientLight":119.00000}}[0m
+[0;32mI (86123) app_main: Light level: DARK (119), set brightness=40[0m
+[0;32mI (86123) esp_rmaker_param: Reporting params: {"Light":{"Brightness":40}}[0m
+[0;32mI (91113) lib_adc: ADC1 CH0 raw: 191[0m
+[0;32mI (91113) esp_rmaker_param: Reporting Time Series Data for Light.AmbientLight[0m
+[0;32mI (91113) esp_rmaker_param: Reporting params: {"Light":{"AmbientLight":191.00000}}[0m
+[0;32mI (91123) app_main: Light level: DARK (191), set brightness=40[0m
+[0;32mI (91123) esp_rmaker_param: Reporting params: {"Light":{"Brightness":40}}[0m
+[0;32mI (96113) lib_adc: ADC1 CH0 raw: 443[0m
+[0;32mI (96113) esp_rmaker_param: Reporting Time Series Data for Light.AmbientLight[0m
+[0;32mI (96113) esp_rmaker_param: Reporting params: {"Light":{"AmbientLight":443.00000}}[0m
+[0;32mI (96123) app_main: Light level: DARK (443), set brightness=40[0m
+[0;32mI (96123) esp_rmaker_param: Reporting params: {"Light":{"Brightness":40}}[0m
+[0;32mI (101113) lib_adc: ADC1 CH0 raw: 223[0m
+[0;32mI (101113) esp_rmaker_param: Reporting Time Series Data for Light.AmbientLight[0m
+[0;32mI (101113) esp_rmaker_param: Reporting params: {"Light":{"AmbientLight":223.00000}}[0m
+[0;32mI (101123) app_main: Light level: DARK (223), set brightness=40[0m
+[0;32mI (101123) esp_rmaker_param: Reporting params: {"Light":{"Brightness":40}}[0m
+[0;32mI (106113) lib_adc: ADC1 CH0 raw: 119[0m
+[0;32mI (106113) esp_rmaker_param: Reporting Time Series Data for Light.AmbientLight[0m
+[0;32mI (106113) esp_rmaker_param: Reporting params: {"Light":{"AmbientLight":119.00000}}[0m
+[0;32mI (106123) app_main: Light level: DARK (119), set brightness=40[0m
+[0;32mI (106123) esp_rmaker_param: Reporting params: {"Light":{"Brightness":40}}[0m
+[0;32mI (111113) lib_adc: ADC1 CH0 raw: 149[0m
+[0;32mI (111113) esp_rmaker_param: Reporting Time Series Data for Light.AmbientLight[0m
+[0;32mI (111113) esp_rmaker_param: Reporting params: {"Light":{"AmbientLight":149.00000}}[0m
+[0;32mI (111123) app_main: Light level: DARK (149), set brightness=40[0m
+[0;32mI (111123) esp_rmaker_param: Reporting params: {"Light":{"Brightness":40}}[0m
+[0;32mI (116113) lib_adc: ADC1 CH0 raw: 84[0m
+[0;32mI (116113) esp_rmaker_param: Reporting Time Series Data for Light.AmbientLight[0m
+[0;32mI (116113) esp_rmaker_param: Reporting params: {"Light":{"AmbientLight":84.00000}}[0m
+[0;32mI (116123) app_main: Light level: DARK (84), set brightness=40[0m
+[0;32mI (116123) esp_rmaker_param: Reporting params: {"Light":{"Brightness":40}}[0m
+[0;32mI (121113) lib_adc: ADC1 CH0 raw: 107[0m
+[0;32mI (121113) esp_rmaker_param: Reporting Time Series Data for Light.AmbientLight[0m
+[0;32mI (121113) esp_rmaker_param: Reporting params: {"Light":{"AmbientLight":107.00000}}[0m
+[0;32mI (121123) app_main: Light level: DARK (107), set brightness=40[0m
+[0;32mI (121123) esp_rmaker_param: Reporting params: {"Light":{"Brightness":40}}[0m
+[0;32mI (126113) lib_adc: ADC1 CH0 raw: 167[0m
+[0;32mI (126113) esp_rmaker_param: Reporting Time Series Data for Light.AmbientLight[0m
+[0;32mI (126113) esp_rmaker_param: Reporting params: {"Light":{"AmbientLight":167.00000}}[0m
+[0;32mI (126123) app_main: Light level: DARK (167), set brightness=40[0m
+[0;32mI (126123) esp_rmaker_param: Reporting params: {"Light":{"Brightness":40}}[0m
+[0;32mI (131113) lib_adc: ADC1 CH0 raw: 155[0m
+[0;32mI (131113) esp_rmaker_param: Reporting Time Series Data for Light.AmbientLight[0m
+[0;32mI (131113) esp_rmaker_param: Reporting params: {"Light":{"AmbientLight":155.00000}}[0m
+[0;32mI (131123) app_main: Light level: DARK (155), set brightness=40[0m
+[0;32mI (131123) esp_rmaker_param: Reporting params: {"Light":{"Brightness":40}}[0m
+[0;32mI (136113) lib_adc: ADC1 CH0 raw: 176[0m
+[0;32mI (136113) esp_rmaker_param: Reporting Time Series Data for Light.AmbientLight[0m
+[0;32mI (136113) esp_rmaker_param: Reporting params: {"Light":{"AmbientLight":176.00000}}[0m
+[0;32mI (136123) app_main: Light level: DARK (176), set brightness=40[0m
+[0;32mI (136123) esp_rmaker_param: Reporting params: {"Light":{"Brightness":40}}[0m
+[0;32mI (141113) lib_adc: ADC1 CH0 raw: 235[0m
+[0;32mI (141113) esp_rmaker_param: Reporting Time Series Data for Light.AmbientLight[0m
+[0;32mI (141113) esp_rmaker_param: Reporting params: {"Light":{"AmbientLight":235.00000}}[0m
+[0;32mI (141123) app_main: Light level: DARK (235), set brightness=40[0m
+[0;32mI (141123) esp_rmaker_param: Reporting params: {"Light":{"Brightness":40}}[0m
+[0;32mI (146113) lib_adc: ADC1 CH0 raw: 231[0m
+[0;32mI (146113) esp_rmaker_param: Reporting Time Series Data for Light.AmbientLight[0m
+[0;32mI (146113) esp_rmaker_param: Reporting params: {"Light":{"AmbientLight":231.00000}}[0m
+[0;32mI (146123) app_main: Light level: DARK (231), set brightness=40[0m
+[0;32mI (146123) esp_rmaker_param: Reporting params: {"Light":{"Brightness":40}}[0m
+[0;32mI (151113) lib_adc: ADC1 CH0 raw: 169[0m
+[0;32mI (151113) esp_rmaker_param: Reporting Time Series Data for Light.AmbientLight[0m
+[0;32mI (151113) esp_rmaker_param: Reporting params: {"Light":{"AmbientLight":169.00000}}[0m
+[0;32mI (151123) app_main: Light level: DARK (169), set brightness=40[0m
+[0;32mI (151123) esp_rmaker_param: Reporting params: {"Light":{"Brightness":40}}[0m
+[0;32mI (156113) lib_adc: ADC1 CH0 raw: 137[0m
+[0;32mI (156113) esp_rmaker_param: Reporting Time Series Data for Light.AmbientLight[0m
+[0;32mI (156113) esp_rmaker_param: Reporting params: {"Light":{"AmbientLight":137.00000}}[0m
+[0;32mI (156123) app_main: Light level: DARK (137), set brightness=40[0m
+[0;32mI (156123) esp_rmaker_param: Reporting params: {"Light":{"Brightness":40}}[0m
+[0;32mI (161113) lib_adc: ADC1 CH0 raw: 141[0m
+[0;32mI (161113) esp_rmaker_param: Reporting Time Series Data for Light.AmbientLight[0m
+[0;32mI (161113) esp_rmaker_param: Reporting params: {"Light":{"AmbientLight":141.00000}}[0m
+[0;32mI (161123) app_main: Light level: DARK (141), set brightness=40[0m
+[0;32mI (161123) esp_rmaker_param: Reporting params: {"Light":{"Brightness":40}}[0m
+[0;32mI (166113) lib_adc: ADC1 CH0 raw: 92[0m
+[0;32mI (166113) esp_rmaker_param: Reporting Time Series Data for Light.AmbientLight[0m
+[0;32mI (166113) esp_rmaker_param: Reporting params: {"Light":{"AmbientLight":92.00000}}[0m
+[0;32mI (166123) app_main: Light level: DARK (92), set brightness=40[0m
+[0;32mI (166123) esp_rmaker_param: Reporting params: {"Light":{"Brightness":40}}[0m
+[0;32mI (171113) lib_adc: ADC1 CH0 raw: 158[0m
+[0;32mI (171113) esp_rmaker_param: Reporting Time Series Data for Light.AmbientLight[0m
+[0;32mI (171113) esp_rmaker_param: Reporting params: {"Light":{"AmbientLight":158.00000}}[0m
+[0;32mI (171123) app_main: Light level: DARK (158), set brightness=40[0m
+[0;32mI (171123) esp_rmaker_param: Reporting params: {"Light":{"Brightness":40}}[0m
+[0;31mE (171133) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (176113) lib_adc: ADC1 CH0 raw: 223[0m
+[0;32mI (176113) esp_rmaker_param: Reporting Time Series Data for Light.AmbientLight[0m
+[0;32mI (176113) esp_rmaker_param: Reporting params: {"Light":{"AmbientLight":223.00000}}[0m
+[0;31mE (176123) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (176123) app_main: Light level: DARK (223), set brightness=40[0m
+[0;32mI (176133) esp_rmaker_param: Reporting params: {"Light":{"Brightness":40}}[0m
+[0;31mE (176143) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (181113) lib_adc: ADC1 CH0 raw: 214[0m
+[0;32mI (181113) esp_rmaker_param: Reporting Time Series Data for Light.AmbientLight[0m
+[0;32mI (181113) esp_rmaker_param: Reporting params: {"Light":{"AmbientLight":214.00000}}[0m
+[0;31mE (181123) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (181123) app_main: Light level: DARK (214), set brightness=40[0m
+[0;32mI (181133) esp_rmaker_param: Reporting params: {"Light":{"Brightness":40}}[0m
+[0;31mE (181143) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (186113) lib_adc: ADC1 CH0 raw: 206[0m
+[0;32mI (186113) esp_rmaker_param: Reporting Time Series Data for Light.AmbientLight[0m
+[0;32mI (186113) esp_rmaker_param: Reporting params: {"Light":{"AmbientLight":206.00000}}[0m
+[0;31mE (186123) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (186123) app_main: Light level: DARK (206), set brightness=40[0m
+[0;32mI (186133) esp_rmaker_param: Reporting params: {"Light":{"Brightness":40}}[0m
+[0;31mE (186143) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (191113) lib_adc: ADC1 CH0 raw: 200[0m
+[0;32mI (191113) esp_rmaker_param: Reporting Time Series Data for Light.AmbientLight[0m
+[0;32mI (191113) esp_rmaker_param: Reporting params: {"Light":{"AmbientLight":200.00000}}[0m
+[0;31mE (191123) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (191123) app_main: Light level: DARK (200), set brightness=40[0m
+[0;32mI (191133) esp_rmaker_param: Reporting params: {"Light":{"Brightness":40}}[0m
+[0;31mE (191143) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (196113) lib_adc: ADC1 CH0 raw: 159[0m
+[0;32mI (196113) esp_rmaker_param: Reporting Time Series Data for Light.AmbientLight[0m
+[0;32mI (196113) esp_rmaker_param: Reporting params: {"Light":{"AmbientLight":159.00000}}[0m
+[0;31mE (196123) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (196123) app_main: Light level: DARK (159), set brightness=40[0m
+[0;32mI (196133) esp_rmaker_param: Reporting params: {"Light":{"Brightness":40}}[0m
+[0;31mE (196143) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (201113) lib_adc: ADC1 CH0 raw: 137[0m
+[0;32mI (201113) esp_rmaker_param: Reporting Time Series Data for Light.AmbientLight[0m
+[0;32mI (201113) esp_rmaker_param: Reporting params: {"Light":{"AmbientLight":137.00000}}[0m
+[0;31mE (201123) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (201123) app_main: Light level: DARK (137), set brightness=40[0m
+[0;32mI (201133) esp_rmaker_param: Reporting params: {"Light":{"Brightness":40}}[0m
+[0;31mE (201143) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (206113) lib_adc: ADC1 CH0 raw: 141[0m
+[0;32mI (206113) esp_rmaker_param: Reporting Time Series Data for Light.AmbientLight[0m
+[0;32mI (206113) esp_rmaker_param: Reporting params: {"Light":{"AmbientLight":141.00000}}[0m
+[0;31mE (206123) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (206123) app_main: Light level: DARK (141), set brightness=40[0m
+[0;32mI (206133) esp_rmaker_param: Reporting params: {"Light":{"Brightness":40}}[0m
+[0;31mE (206143) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (211113) lib_adc: ADC1 CH0 raw: 142[0m
+[0;32mI (211113) esp_rmaker_param: Reporting Time Series Data for Light.AmbientLight[0m
+[0;32mI (211113) esp_rmaker_param: Reporting params: {"Light":{"AmbientLight":142.00000}}[0m
+[0;31mE (211123) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (211123) app_main: Light level: DARK (142), set brightness=40[0m
+[0;32mI (211133) esp_rmaker_param: Reporting params: {"Light":{"Brightness":40}}[0m
+[0;31mE (211143) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (216113) lib_adc: ADC1 CH0 raw: 140[0m
+[0;32mI (216113) esp_rmaker_param: Reporting Time Series Data for Light.AmbientLight[0m
+[0;32mI (216113) esp_rmaker_param: Reporting params: {"Light":{"AmbientLight":140.00000}}[0m
+[0;31mE (216123) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (216123) app_main: Light level: DARK (140), set brightness=40[0m
+[0;32mI (216133) esp_rmaker_param: Reporting params: {"Light":{"Brightness":40}}[0m
+[0;31mE (216143) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (221113) lib_adc: ADC1 CH0 raw: 119[0m
+[0;32mI (221113) esp_rmaker_param: Reporting Time Series Data for Light.AmbientLight[0m
+[0;32mI (221113) esp_rmaker_param: Reporting params: {"Light":{"AmbientLight":119.00000}}[0m
+[0;31mE (221123) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (221123) app_main: Light level: DARK (119), set brightness=40[0m
+[0;32mI (221133) esp_rmaker_param: Reporting params: {"Light":{"Brightness":40}}[0m
+[0;31mE (221143) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (226113) lib_adc: ADC1 CH0 raw: 91[0m
+[0;32mI (226113) esp_rmaker_param: Reporting Time Series Data for Light.AmbientLight[0m
+[0;32mI (226113) esp_rmaker_param: Reporting params: {"Light":{"AmbientLight":91.00000}}[0m
+[0;31mE (226123) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (226123) app_main: Light level: DARK (91), set brightness=40[0m
+[0;32mI (226133) esp_rmaker_param: Reporting params: {"Light":{"Brightness":40}}[0m
+[0;31mE (226143) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (231113) lib_adc: ADC1 CH0 raw: 168[0m
+[0;32mI (231113) esp_rmaker_param: Reporting Time Series Data for Light.AmbientLight[0m
+[0;32mI (231113) esp_rmaker_param: Reporting params: {"Light":{"AmbientLight":168.00000}}[0m
+[0;31mE (231123) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (231123) app_main: Light level: DARK (168), set brightness=40[0m
+[0;32mI (231133) esp_rmaker_param: Reporting params: {"Light":{"Brightness":40}}[0m
+[0;31mE (231143) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (236113) lib_adc: ADC1 CH0 raw: 171[0m
+[0;32mI (236113) esp_rmaker_param: Reporting Time Series Data for Light.AmbientLight[0m
+[0;32mI (236113) esp_rmaker_param: Reporting params: {"Light":{"AmbientLight":171.00000}}[0m
+[0;31mE (236123) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (236123) app_main: Light level: DARK (171), set brightness=40[0m
+[0;32mI (236133) esp_rmaker_param: Reporting params: {"Light":{"Brightness":40}}[0m
+[0;31mE (236143) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m

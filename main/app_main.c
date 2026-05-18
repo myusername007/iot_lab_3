@@ -22,11 +22,10 @@ static const char *TAG = "app_main";
 
 esp_rmaker_device_t *light_device;
 
-#define REPORTING_PERIOD  5  /* секунд, для тесту */
+#define REPORTING_PERIOD  5
 
 static TimerHandle_t sensor_timer;
 
-/* Створення кастомного float-параметра */
 static esp_rmaker_param_t *custom_param_create(const char *name, float val)
 {
     esp_rmaker_param_t *param = esp_rmaker_param_create(
@@ -34,46 +33,43 @@ static esp_rmaker_param_t *custom_param_create(const char *name, float val)
         esp_rmaker_float(val),
         PROP_FLAG_READ | PROP_FLAG_TIME_SERIES);
     if (param) {
-        esp_rmaker_param_add_ui_type(param, ESP_RMAKER_UI_TEXT);
+        esp_rmaker_param_add_ui_type(param, "esp.ui.text");
     }
     return param;
 }
 
-/* Таймер: читає ADC, визначає рівень, керує яскравістю */
 static void app_sensor_update(TimerHandle_t handle)
 {
     int raw = lib_adc_get();
 
-    /* Репортуємо сирий ADC в аплікацію */
-    esp_rmaker_param_update_and_report(
-        esp_rmaker_device_get_param_by_type(light_device, "esp.param.custom"),
-        esp_rmaker_float((float)raw));
+    esp_rmaker_param_t *ambient_param = esp_rmaker_device_get_param_by_name(light_device, "AmbientLight");
+    if (ambient_param) {
+        esp_rmaker_param_update_and_report(ambient_param, esp_rmaker_float((float)raw));
+    }
 
     uint16_t brightness;
     const char *level;
 
     if (raw > LIGHT_THRESHOLD_BRIGHT) {
-        /* Світло — не втручаємось */
         ESP_LOGI(TAG, "Light level: BRIGHT (%d), user control", raw);
         return;
     } else if (raw > LIGHT_THRESHOLD_DUSK) {
-        /* Сутінки — 100% */
         brightness = 100;
         level = "DUSK";
     } else {
-        /* Темно — 40% */
         brightness = 40;
         level = "DARK";
     }
 
     ESP_LOGI(TAG, "Light level: %s (%d), set brightness=%d", level, raw, brightness);
     app_light_set_brightness(brightness);
-    esp_rmaker_param_update_and_report(
-        esp_rmaker_device_get_param_by_type(light_device, ESP_RMAKER_PARAM_BRIGHTNESS),
-        esp_rmaker_int(brightness));
+
+    esp_rmaker_param_t *brightness_param = esp_rmaker_device_get_param_by_name(light_device, "Brightness");
+    if (brightness_param) {
+        esp_rmaker_param_update_and_report(brightness_param, esp_rmaker_int(brightness));
+    }
 }
 
-/* Callback на запити з хмари */
 static esp_err_t bulk_write_cb(const esp_rmaker_device_t *device,
     const esp_rmaker_param_write_req_t write_req[],
     uint8_t count, void *priv_data, esp_rmaker_write_ctx_t *ctx)
@@ -132,7 +128,6 @@ void app_main(void)
     esp_rmaker_device_add_param(light_device,
         esp_rmaker_saturation_param_create(ESP_RMAKER_DEF_SATURATION_NAME, DEFAULT_SATURATION));
 
-    /* Параметр освітлення */
     esp_rmaker_device_add_param(light_device, custom_param_create("AmbientLight", 0));
 
     esp_rmaker_node_add_device(node, light_device);
@@ -153,20 +148,20 @@ void app_main(void)
     app_insights_enable();
     esp_rmaker_start();
 
-    /* Ініціалізація ADC та таймера */
-    lib_adc_init();
-    sensor_timer = xTimerCreate("sensor_timer",
-        (REPORTING_PERIOD * 1000) / portTICK_PERIOD_MS,
-        pdTRUE, NULL, app_sensor_update);
-    if (sensor_timer) {
-        xTimerStart(sensor_timer, 0);
-    }
-
     err = app_network_set_custom_mfg_data(MFG_DATA_DEVICE_TYPE_LIGHT, MFG_DATA_DEVICE_SUBTYPE_LIGHT);
     err = app_network_start((app_network_pop_type_t)CONFIG_APP_POP_TYPE);
     if (err != ESP_OK) {
         ESP_LOGE(TAG, "Network start failed. Aborting.");
         vTaskDelay(5000 / portTICK_PERIOD_MS);
         abort();
+    }
+
+    /* Ініціалізація ADC та таймера — після підключення до мережі */
+    lib_adc_init();
+    sensor_timer = xTimerCreate("sensor_timer",
+        (REPORTING_PERIOD * 1000) / portTICK_PERIOD_MS,
+        pdTRUE, NULL, app_sensor_update);
+    if (sensor_timer) {
+        xTimerStart(sensor_timer, 0);
     }
 }

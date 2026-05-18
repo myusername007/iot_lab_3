@@ -1,0 +1,13 @@
+# Target labels
+ bootloader
+# Source files and their labels
+/Users/root7/iot_lab_3/build/CMakeFiles/bootloader
+/Users/root7/iot_lab_3/build/CMakeFiles/bootloader.rule
+/Users/root7/iot_lab_3/build/CMakeFiles/bootloader-complete.rule
+/Users/root7/iot_lab_3/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule
+/Users/root7/iot_lab_3/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule
+/Users/root7/iot_lab_3/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule
+/Users/root7/iot_lab_3/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule
+/Users/root7/iot_lab_3/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule
+/Users/root7/iot_lab_3/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule
+/Users/root7/iot_lab_3/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule

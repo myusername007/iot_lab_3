@@ -15,5 +15,4 @@ dependencies:
     version: "*"
   espressif/rmaker_app_insights:
     version: "*"
-  espressif/mqtt:
-    version: "*"
+  

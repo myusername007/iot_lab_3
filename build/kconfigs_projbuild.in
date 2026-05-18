@@ -1,0 +1,8 @@
+source "/Users/root7/esp/esp-idf/components/bootloader/Kconfig.projbuild"
+source "/Users/root7/esp/esp-idf/components/esp_app_format/Kconfig.projbuild"
+source "/Users/root7/esp/esp-idf/components/esp_rom/Kconfig.projbuild"
+source "/Users/root7/esp/esp-idf/components/esptool_py/Kconfig.projbuild"
+source "/Users/root7/esp/esp-idf/components/partition_table/Kconfig.projbuild"
+source "/Users/root7/iot_lab_3/main/Kconfig.projbuild"
+source "/Users/root7/iot_lab_3/managed_components/espressif__esp_rainmaker/Kconfig.projbuild"
+source "/Users/root7/iot_lab_3/managed_components/espressif__rmaker_app_network/Kconfig.projbuild"

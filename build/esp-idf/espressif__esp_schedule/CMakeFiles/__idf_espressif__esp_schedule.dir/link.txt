@@ -1,0 +1,2 @@
+/Users/root7/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20240530/xtensa-esp-elf/bin/xtensa-esp32s3-elf-ar qc libespressif__esp_schedule.a CMakeFiles/__idf_espressif__esp_schedule.dir/src/esp_schedule.c.obj CMakeFiles/__idf_espressif__esp_schedule.dir/src/esp_schedule_nvs.c.obj
+/Users/root7/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20240530/xtensa-esp-elf/bin/xtensa-esp32s3-elf-ranlib libespressif__esp_schedule.a

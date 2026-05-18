@@ -9,5 +9,6 @@ else()
 endif(DEFINED ENV{RMAKER_PATH})
 
 set(PROJECT_VER "1.0")
+set(PARTITION_TABLE_CSV_PATH "${CMAKE_CURRENT_LIST_DIR}/partitions_4mb_optimised.csv")
 include($ENV{IDF_PATH}/tools/cmake/project.cmake)
 project(led_light)

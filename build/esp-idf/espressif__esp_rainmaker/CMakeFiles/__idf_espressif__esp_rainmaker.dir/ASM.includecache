@@ -1,0 +1,14 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/root7/iot_lab_3/build/rmaker_claim_service_server.crt.S
+
+/Users/root7/iot_lab_3/build/rmaker_mqtt_server.crt.S
+
+/Users/root7/iot_lab_3/build/rmaker_ota_server.crt.S
+
